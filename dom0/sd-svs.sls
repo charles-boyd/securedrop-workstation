@@ -14,10 +14,12 @@
 {% load_yaml as defaults -%}
 name:         sd-svs
 present:
-  - template: fedora-26
-  - label:    yellow
+  - template:   securedrop-workstation
+  - label:      yellow
 prefs:
-  - netvm:    ""
+  - netvm:      ""
+  - kernel:     ""
+  - virt_mode:  hvm
 {%- endload %}
 
 {{ load(defaults) }}
